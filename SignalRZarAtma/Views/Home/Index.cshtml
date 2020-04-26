@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/zar.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+<script src="~/signalr/hubs"></script>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divGiris">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" placeholder="Kullanıcı Adı" class="form-control" id="txtKullaniciAdi" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" placeholder="Salon Kodu" class="form-control" id="txtSalonKodu" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <input type="button" class="btn btn-primary btn-block" value="Giriş Yap" id="btnGirisYap" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divRakipOyuncuBekleniyor" style="display:none">
+            <div class="alert alert-info" role="alert"><h3>Oyuncu katılması bekleniyor.</h3></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divRakipOyuncununSirasi" style="display:none">
+            <div class="alert alert-warning" role="alert"><h3>Rakip oyuncunun oynaması bekleniyor.</h3></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divSiraSende" style="display:none">
+            <main id="dice-body">
+                <div id="tl" class="dot"></div>
+                <div id="tc" class="dot"></div>
+                <div id="tr" class="dot"></div>
+                <div id="cl" class="dot"></div>
+                <div id="cc" class="dot show"></div>
+                <div id="cr" class="dot"></div>
+                <div id="bl" class="dot"></div>
+                <div id="bc" class="dot"></div>
+                <div id="br" class="dot"></div>
+            </main>
+            <section>
+                <button id="roll-btn">Zar At</button>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divKazandiSonuc" style="display:none">
+            <div class="alert alert-success" role="alert"><h3>Tebrikler Oyunu Kazandınız.</h3></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divYenildiSonuc" style="display:none">
+            <div class="alert alert-danger" role="alert"><h3>Geçmiş Olsun Yenildiniz.</h3></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="divBerabereSonuc" style="display:none">
+            <div class="alert alert-info" role="alert"><h3>Berabere Kaldınız.</h3></div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/zar.js"></script>
+
+
+
